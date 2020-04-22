@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_detail_container"
+    android:elevation="3dp"
+    android:background="@color/colorAccent"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/product_detail_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#d4d4d4"
+        android:padding="16sp"
+        android:text="Product Details"
+        android:textColor="#9c9c9c"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_detail_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Exceptional Clarity - The 24 MP triple camera lets you capture the smallest details crystal clear while the 32 MP selfie camera will intelligently recognise you to produce expert selfies.
+
+Room for More - The massive 128 GB built-in memory means more flexibility and space for the things you love like music, photos, videos and apps.
+
+Stunning Display - Big, bold and beautiful, the 6.15-inch FHD display with a delicate Dewdrop notch is a gorgeous canvas for you to live your life in brilliant colour.
+
+A Battery that Goes the Distance - With HUAWEI Quick Charge, the powerful 3340 mAh charges faster and lasts longer - letting you get on with your fast-paced life and not slow down."
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_detail_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

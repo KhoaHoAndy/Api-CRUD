@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDescriptionFragment">
+
+    <TextView
+        android:id="@+id/tv_product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="#000000"
+        android:text="Exceptional Clarity - The 24 MP triple camera lets you capture the smallest details crystal clear while the 32 MP selfie camera will intelligently recognise you to produce expert selfies.
+
+Room for More - The massive 128 GB built-in memory means more flexibility and space for the things you love like music, photos, videos and apps.
+
+Stunning Display - Big, bold and beautiful, the 6.15-inch FHD display with a delicate Dewdrop notch is a gorgeous canvas for you to live your life in brilliant colour.
+
+A Battery that Goes the Distance - With HUAWEI Quick Charge, the powerful 3340 mAh charges faster and lasts longer - letting you get on with your fast-paced life and not slow down." />
+</FrameLayout>

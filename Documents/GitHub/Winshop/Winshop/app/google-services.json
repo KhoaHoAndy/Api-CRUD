@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1091065626228",
+    "firebase_url": "https://project2-70d54.firebaseio.com",
+    "project_id": "project2-70d54",
+    "storage_bucket": "project2-70d54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091065626228:android:60ccfbadc0e4394b339b21",
+        "android_client_info": {
+          "package_name": "win.shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091065626228-uhfruvquv6pt41togn464eu0ptr145i9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCR1aI1F1DB9FIBNuMVON0npFcL9PDDys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091065626228-uhfruvquv6pt41togn464eu0ptr145i9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
