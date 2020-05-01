@@ -1,0 +1,32 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model ApplicationUser
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h1>Hi student @Html.DisplayFor(model => model.UserName), this is your details:</h1>
+<h5>Your Name: @Html.DisplayFor(model => model.Name)</h5>
+<br />
+<h5>Phone Number: @Html.DisplayFor(model => model.PhoneNumber)</h5>
+<br />
+<h5>Address: @Html.DisplayFor(model => model.Address)</h5>
+<br />
+<h5>Program: @Html.DisplayFor(model => model.Program)</h5>
+<br />
+<h5>Age: @Html.DisplayFor(model => model.Age)</h5>
+<br />
+<br />
+<h5>Description: @Html.DisplayFor(model => model.Description)</h5>
+<br />
+
+<a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-primary">Update details</a>
+<a asp-action="Appointment" asp-route-id="@Model.Id" class="btn btn-primary">Make Appointment</a>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

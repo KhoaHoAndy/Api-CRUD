@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Comments>
+@{
+    ViewData["Title"] = "Student Page";
+}
+@{
+    Layout = "_Layout";
+    var title = "READ Student";
+    ViewData["Title"] = title;
+}
+<div>
+    <h4>Comments</h4>
+    <hr />
+    <h2>@title</h2>
+    <h3><a asp-action="Create" class="btn btn-sm btn-secondary">Create</a></h3>
+    <table class="table table-bordered table-sm table-striped">
+        <thead>
+            <tr><th>Id</th><th>Name</th><th>Program</th><th>Student Comments</th><th>Update</th></tr>
+        </thead>
+        <tbody>
+            @if (Model == null)
+            {
+                <tr><td colspan="7" class="text-center">No Model Data</td></tr>
+            }
+            else
+            {
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.Id</td>
+                        <td>@p.Name</td>
+                        <td>@p.Program</td>
+                        <td>@p.StudentComments</td>
+                        <td><a asp-action="Update" asp-route-id="@p.Id">Update</a></td>
+                        <td>
+                            <form asp-action="Delete" method="post" asp-route-id="@p.Id">
+                                <button>Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+
+</div>

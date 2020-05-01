@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Teacher>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    Layout = "_Layout";
+    var title = "READ Teacher";
+    ViewData["Title"] = title;
+}
+
+<h2>@title</h2>
+<table class="table table-bordered table-sm table-striped">
+    <thead>
+        <tr><th>Id</th><th>Name</th><th>Skills</th><th>Phone Number</th><th>Update</th></tr>
+    </thead>
+    <tbody>
+        @if (Model == null)
+        {
+            <tr><td colspan="7" class="text-center">No Model Data</td></tr>
+        }
+        else
+        {
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Id</td>
+                    <td>@p.Name</td>
+                    <td>@p.Skills</td>
+                    <td>@p.PhoneNumber</td>
+                    <td><a asp-action="Update" asp-route-id="@p.Id">Update</a></td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<h2>Your Resume</h2>
+@if (Model == null)
+{
+    <tr><td colspan="7" class="text-center">No Model Data</td></tr>
+}
+else
+{
+    @foreach (var p in Model)
+    {
+        <h1>Dear teacher @p.Name, this is your details:</h1>
+        <h5>Your Name: @p.Name</h5>
+        <br />
+        <h5>Phone Number: @p.PhoneNumber</h5>
+        <br />
+        <h5>Address: @p.Address</h5>
+        <br />
+        <h5>Languages: @p.Languages</h5>
+        <br />
+        <h5>Education: @p.Education</h5>
+        <br />
+        <br />
+        <h5>Experience: @p.Experience</h5>
+        <br />
+        <br />
+        <h5>Prefer Time: @p.Prefertime</h5>
+        <br />
+
+        <a asp-action="Resume" asp-route-id="@p.Id" class="btn btn-primary">Update resume</a>
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
+    }
+}
